@@ -11,7 +11,7 @@ import clip_ood
 
 
 def load_dataset(dataset_name):
-    data_path = 'data/'
+    data_path = '/kaggle/input/'
 
     if dataset_name == 'imagenet':
         dataset = ImageNet(root=data_path+'ImageNet/', split='val')
@@ -20,9 +20,9 @@ def load_dataset(dataset_name):
     elif dataset_name == 'sun':
         dataset = tv.datasets.ImageFolder(data_path+"SUN/images/")
     elif dataset_name == 'texture':
-        dataset = tv.datasets.ImageFolder(data_path+"dtd/images/")
+        dataset = tv.datasets.ImageFolder(data_path+"texture/")
     elif dataset_name == 'places':
-        dataset = tv.datasets.ImageFolder(data_path+"Places/")
+        dataset = tv.datasets.ImageFolder(data_path+"/places/Places/")
     elif dataset_name == 'clean':
         dataset = tv.datasets.ImageFolder(data_path+"NINCO_popular_datasets_subsamples/")
     elif dataset_name == 'ninco':
