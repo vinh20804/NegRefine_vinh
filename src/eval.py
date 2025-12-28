@@ -11,7 +11,7 @@ import clip_ood
 
 
 def load_dataset(dataset_name):
-    data_path = '/kaggle/input/'
+    data_path = 'data/'
 
     if dataset_name == 'imagenet':
         dataset = ImageNet(root=data_path+'ImageNet/', split='val')
