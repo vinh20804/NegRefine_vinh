@@ -14,7 +14,7 @@ def load_dataset(dataset_name):
     data_path = '/kaggle/input/'
 
     if dataset_name == 'imagenet':
-        dataset = ImageNet(root=data_path+'ImageNet/', split='val')
+        dataset = ImageNet(root=data_path+'imagenet/ImageNet', split='val')
     elif dataset_name == 'inaturalist':
         dataset = tv.datasets.ImageFolder(data_path+"iNaturalist/")
     elif dataset_name == 'sun':
